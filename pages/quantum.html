@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C’est quoi un ordinateur quantique ? | QUANTUM SHIELD</title>
+  <meta name="description" content="Comprendre le fonctionnement d'un ordinateur quantique : bits classiques vs qubits, superposition, intrication et mesure quantique.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="/" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <span>QUANTUM<span style="color:var(--accent-cyan);">SHIELD</span></span>
+      </a>
+
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link"><span class="nav-num">01</span> Accueil</a></li>
+          <li><a href="/pages/metier.html" class="nav-link"><span class="nav-num">02</span> Le métier</a></li>
+          <li><a href="/pages/menace.html" class="nav-link"><span class="nav-num">03</span> La menace</a></li>
+          <li><a href="/pages/quantum.html" class="nav-link active"><span class="nav-num">04</span> Quantum</a></li>
+          <li><a href="/pages/pqc.html" class="nav-link"><span class="nav-num">05</span> PQC</a></li>
+          <li><a href="/pages/missions.html" class="nav-link"><span class="nav-num">06</span> Missions</a></li>
+          <li><a href="/pages/competences.html" class="nav-link"><span class="nav-num">07</span> Compétences</a></li>
+          <li><a href="/pages/formation.html" class="nav-link"><span class="nav-num">08</span> Formation</a></li>
+          <li><a href="/pages/simulation.html" class="nav-link"><span class="nav-num">09</span> Simulation</a></li>
+          <li><a href="/pages/quiz.html" class="nav-link"><span class="nav-num">10</span> Quiz</a></li>
+          <li><a href="/pages/faq.html" class="nav-link"><span class="nav-num">11</span> FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/pages/simulation.html" class="btn btn-outline btn-sm">Lab Interactif</a>
+        <button type="button" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width:960px;">
+      <div class="section-header">
+        <span class="section-tag">INITIATION SCIENTIFIQUE</span>
+        <h1 class="section-title">C’est quoi un ordinateur quantique ?</h1>
+        <p class="section-subtitle">
+          Passer de la logique binaire du transistor aux propriétés contre-intuitives de la mécanique quantique.
+        </p>
+      </div>
+
+      <!-- Simulator Bit vs Qubit -->
+      <div class="card" style="margin-bottom:2.5rem; padding:2.5rem;">
+        <h2 style="font-size:1.8rem; margin-bottom:0.75rem;">Simulateur Comparatif : Bit vs Qubit</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+          Cliquez sur les onglets pour basculer entre l’univers classique et l’univers quantique.
+        </p>
+
+        <div style="display:flex; gap:1rem; margin-bottom:1.5rem;">
+          <button type="button" class="btn btn-outline active" id="btn-select-bit" style="min-width:160px;">
+            BIT (Classique)
+          </button>
+          <button type="button" class="btn btn-outline" id="btn-select-qubit" style="min-width:160px;">
+            QUBIT (Quantique)
+          </button>
+        </div>
+
+        <div id="stage-bit" class="quantum-comparison-panel">
+          <div class="quantum-box">
+            <span class="badge badge-cyan">LOGIQUE BINAIRE</span>
+            <h3 style="margin-top:0.75rem;">Le Bit</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:0.5rem;">
+              Dans un processeur classique (Intel, AMD, ARM), un bit est représenté par la présence ou l'absence d'électrons dans un condensateur ou la tension d'un transistor. C'est <strong>0 OU 1</strong>.
+            </p>
+            <div style="margin-top:1.5rem;">
+              <button type="button" class="btn btn-primary btn-sm" id="bit-toggle-btn">
+                Inverser l'état (0 &harr; 1)
+              </button>
+            </div>
+          </div>
+
+          <div class="quantum-interactive-stage">
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); margin-bottom:0.5rem;">VALEUR MESURÉE :</div>
+            <div class="bit-state-indicator" id="bit-val">0</div>
+            <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan); margin-top:0.5rem;">État certain &bull; Déterminisme absolu</div>
+          </div>
+        </div>
+
+        <div id="stage-qubit" class="quantum-comparison-panel" style="display:none;">
+          <div class="quantum-box active">
+            <span class="badge badge-violet">MÉCANIQUE QUANTIQUE</span>
+            <h3 style="margin-top:0.75rem;">Le Qubit</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:0.5rem;">
+              Un qubit exploite le spin d'un électron, la polarisation d'un photon ou le flux d'une boucle supraconductrice. Il peut être dans une combinaison linéaire continue des deux états de base.
+            </p>
+            <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+              <button type="button" class="btn btn-primary btn-sm" id="qubit-measure-btn">
+                Mesurer (Provoquer l'Effondrement)
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm" id="qubit-reset-btn" style="display:none;">
+                Réinitialiser la Superposition
+              </button>
+            </div>
+            <div id="qubit-status-alert" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-violet); margin-top:1rem;">
+              Superposition active : le qubit explore un ensemble infini d'amplitudes complexes.
+            </div>
+          </div>
+
+          <div class="quantum-interactive-stage">
+            <div class="qubit-sphere-container">
+              <div class="qubit-sphere">
+                <div class="qubit-vector" id="qubit-vector-needle"></div>
+              </div>
+            </div>
+            <div class="qubit-math" id="qubit-math-text">|&psi;&rang; = &alpha;|0&rang; + &beta;|1&rang;</div>
+            <div style="display:flex; gap:2rem; font-family:var(--font-mono); font-size:0.8rem; margin-top:0.5rem;">
+              <span>P(|0&rang;): <strong id="qubit-prob-0" style="color:var(--accent-cyan);">50%</strong></span>
+              <span>P(|1&rang;): <strong id="qubit-prob-1" style="color:var(--accent-violet);">50%</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The 3 Pillars of Quantum Computing -->
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; margin-bottom:2.5rem;">
+        <div class="card">
+          <span class="badge badge-cyan">PILIER 1</span>
+          <h3 style="font-size:1.15rem; margin:0.75rem 0 0.5rem 0;">Superposition</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+            Si un registre de 50 bits classiques représente un seul nombre à la fois, un registre de 50 qubits peut représenter 2<sup>50</sup> (plus de mille trillions) d'états simultanément.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-violet">PILIER 2</span>
+          <h3 style="font-size:1.15rem; margin:0.75rem 0 0.5rem 0;">Intrication (Entanglement)</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+            Deux qubits intriqués forment un système indivisible. Même séparés par des années-lumière, modifier l'un affecte instantanément l'autre (l'« action fantomatique à distance » d'Einstein).
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-green">PILIER 3</span>
+          <h3 style="font-size:1.15rem; margin:0.75rem 0 0.5rem 0;">Interférence Quantique</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+            Les algorithmes quantiques (comme Shor) manipulent les phases des probabilités pour amplifier les chemins menant à la bonne réponse et annuler par interférence destructrice les fausses pistes.
+          </p>
+        </div>
+      </div>
+
+      <!-- Distinction: Physical vs Logical Qubits -->
+      <div class="card" style="padding:2.5rem; margin-bottom:2.5rem;">
+        <span class="badge badge-warning">NUANCE TECHNIQUE ESSENTIELLE</span>
+        <h2 style="font-size:1.6rem; margin:0.75rem 0 1rem 0;">Qubits Physiques vs Qubits Logiques</h2>
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary); margin-bottom:1rem;">
+          Les annonces dans la presse parlent souvent de processeurs à 100 ou 1000 qubits. Pourquoi ne cassent-ils pas encore la cryptographie ?
+        </p>
+        <p style="font-size:0.95rem; line-height:1.8; color:var(--text-secondary);">
+          Ces qubits sont des <strong>qubits physiques bruités</strong> : la moindre fluctuation thermique ou onde parasite provoque une « décohérence » et détruit le calcul. Pour exécuter l'algorithme de Shor contre RSA-2048, il faut environ <strong>4000 qubits logiques parfaits</strong> sans erreur. Or, fabriquer 1 qubit logique requiert entre 1000 et 10000 qubits physiques de correction d'erreurs ! C'est ce fossé d'ingénierie qui accorde encore du temps aux organisations pour migrer.
+        </p>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:3rem;">
+        <a href="/pages/menace.html" class="btn btn-outline">&larr; La menace</a>
+        <a href="/pages/pqc.html" class="btn btn-primary">Découvrir la réponse : la PQC &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center;">
+      <p>&copy; 2026 QUANTUM SHIELD &bull; Projet scolaire &laquo; Les métiers de demain &raquo;</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/quantum.js"></script>
+  <script type="module" src="/js/navigation.js"></script>
+  <script type="module">
+    import { initQuantumSection } from '/js/quantum.js';
+    import { initNavigation } from '/js/navigation.js';
+    initNavigation();
+    initQuantumSection();
+  </script>
+</body>
+</html>

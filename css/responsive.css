@@ -1,0 +1,156 @@
+/* ==========================================================================
+   QUANTUM SHIELD — Responsive Layout (Desktop, Tablet, Mobile)
+   ========================================================================== */
+
+/* Tablettes (1024px et moins) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .path-simple {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sim-nodes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-simple-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobiles et Tablettes portrait (768px et moins) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  .section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  /* Hamburger Menu */
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background: #05070D;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    overflow-y: auto;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-simple-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .path-simple {
+    grid-template-columns: 1fr;
+  }
+
+  .bit-qubit-simple {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-nodes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sim-actions .btn {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .footer-simple-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-simple-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
+
+/* Petits Mobiles (480px et moins) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .sim-box {
+    padding: 1.25rem;
+  }
+
+  .quiz-card {
+    padding: 1.25rem;
+  }
+}

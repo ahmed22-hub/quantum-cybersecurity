@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUANTUM SHIELD — Spécialiste de la cybersécurité quantique</title>
+  <meta name="description" content="Projet universitaire sur le métier de Spécialiste de la cybersécurité quantique : protéger les données d’aujourd’hui contre les ordinateurs de demain.">
+  <meta property="og:title" content="QUANTUM SHIELD — Spécialiste de la cybersécurité quantique">
+  <meta property="og:description" content="Découvrez le métier de demain : Spécialiste de la cybersécurité quantique et la transition vers la cryptographie post-quantique.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- 1. NAVIGATION -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Accueil Quantum Shield">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <circle cx="12" cy="11" r="3"/>
+          </svg>
+        </div>
+        <span>QUANTUM<span style="color:var(--accent-cyan);">SHIELD</span></span>
+      </a>
+
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Accueil</a></li>
+          <li><a href="#metier" class="nav-link">Le métier</a></li>
+          <li><a href="#menace" class="nav-link">La menace</a></li>
+          <li><a href="#missions" class="nav-link">Missions</a></li>
+          <li><a href="#competences" class="nav-link">Compétences</a></li>
+          <li><a href="#formation" class="nav-link">Formation</a></li>
+          <li><a href="#avenir" class="nav-link">Avenir</a></li>
+          <li><a href="#simulation" class="nav-link">Simulation</a></li>
+          <li><a href="#quiz" class="nav-link">Quiz</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#quiz" class="btn btn-primary btn-sm">Tester le Quiz</a>
+        <button type="button" class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- 2. SECTION ACCUEIL (HERO) -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="pulse-dot"></span>
+            <span>PROJET ÉTUDIANT &bull; LES MÉTIERS DE DEMAIN</span>
+          </div>
+
+          <h1 class="hero-title">
+            Spécialiste de la <span class="gradient-text">cybersécurité quantique</span>
+          </h1>
+
+          <p class="hero-quote">
+            « Protéger les données d’aujourd’hui contre les ordinateurs de demain. »
+          </p>
+
+          <p class="hero-subtitle">
+            Quand les futurs ordinateurs quantiques menaceront les chiffrements actuels, ce professionnel préparera les organisations à la transition vers la <strong>cryptographie post-quantique (PQC)</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#metier" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Découvrir le métier</span>
+            </a>
+            <a href="#menace" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Comprendre la menace</span>
+            </a>
+            <a href="#simulation" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Tester la simulation</span>
+            </a>
+          </div>
+
+          <!-- Note de contextualisation -->
+          <div class="simple-banner">
+            <strong>Cadre scientifique :</strong> Métier prospectif en émergence. Les ordinateurs actuels ne cassent pas encore RSA, mais les organisations doivent anticiper dès maintenant.
+          </div>
+        </div>
+
+        <!-- Hero Clean Visual -->
+        <div class="hero-visual-card">
+          <div class="shield-illustration">
+            <svg width="180" height="210" viewBox="0 0 100 115" fill="none">
+              <path d="M50 8 L88 25 V62 C88 88 50 108 50 108 C50 108 12 88 12 62 V25 Z" stroke="url(#shieldGrad)" stroke-width="2.5" fill="rgba(11, 16, 32, 0.75)"/>
+              <circle cx="50" cy="55" r="22" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <circle cx="50" cy="55" r="10" fill="var(--accent-cyan)" opacity="0.85"/>
+              <path d="M50 35 V75 M30 55 H70" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+              <defs>
+                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00D9FF"/>
+                  <stop offset="100%" stop-color="#8B5CF6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="shield-stats">
+            <div class="stat-pill"><span class="pill-dot"></span> Menace Shor : <strong>Théorique</strong></div>
+            <div class="stat-pill"><span class="pill-dot green"></span> Solution PQC : <strong>ML-KEM / ML-DSA</strong></div>
+            <div class="stat-pill"><span class="pill-dot orange"></span> Risque immédiat : <strong>Harvest Now</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SECTION LE MÉTIER -->
+    <section id="metier" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">LE MÉTIER EN BREF</span>
+          <h2 class="section-title">En quoi consiste ce métier ?</h2>
+          <p class="section-subtitle">
+            Un rôle stratégique pour guider les entreprises vers une sécurité durable face aux ruptures technologiques.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3>Auditer l'existant</h3>
+            <p>
+              Inventorier tous les systèmes qui utilisent la cryptographie à clé publique (certificats SSL/TLS, signatures électroniques, VPN, bases de données).
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon violet">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Piloter la migration PQC</h3>
+            <p>
+              Remplacer les algorithmes vulnérables (RSA, ECC) par les nouveaux standards post-quantiques (ML-KEM, ML-DSA) validés par le NIST et l'ANSSI.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3>Sensibiliser &amp; Anticiper</h3>
+            <p>
+              Expliquer les risques aux décideurs, former les développeurs et assurer une veille continue sur les avancées de la recherche quantique.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECTION LA MENACE QUANTIQUE -->
+    <section id="menace" class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">LE PROBLÈME FONDAMENTAL</span>
+          <h2 class="section-title">Pourquoi s’inquiéter dès aujourd’hui ?</h2>
+          <p class="section-subtitle">
+            La menace majeure actuelle ne vient pas d’un ordinateur quantique opérationnel, mais de la collecte préventive des données.
+          </p>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:2.5rem;">
+          <div class="card" style="border-left:4px solid var(--accent-danger);">
+            <span class="badge badge-danger">MENACE IMMÉDIATE</span>
+            <h3 style="margin:0.75rem 0;">« Harvest Now, Decrypt Later » (HNDL)</h3>
+            <p style="margin-bottom:1rem;">
+              Des attaquants interceptent et stockent massivement des communications chiffrées aujourd'hui. Leur objectif : les conserver pour les déchiffrer dans 10 ou 15 ans quand un ordinateur quantique sera capable de casser RSA.
+            </p>
+            <p style="font-size:0.88rem; color:var(--text-muted);">
+              <strong>Données à risque :</strong> dossiers médicaux, secrets industriels, secrets d'État et données bancaires dont la confidentialité doit durer plusieurs décennies.
+            </p>
+          </div>
+
+          <div class="card" style="border-left:4px solid var(--accent-cyan);">
+            <span class="badge badge-cyan">SOLUTION : PQC</span>
+            <h3 style="margin:0.75rem 0;">La Cryptographie Post-Quantique</h3>
+            <p style="margin-bottom:1rem;">
+              La PQC regroupe des algorithmes mathématiques conçus pour s'exécuter sur nos ordinateurs et serveurs classiques actuels, mais dont les équations résistent aux attaques quantiques comme classiques.
+            </p>
+            <p style="font-size:0.88rem; color:var(--text-muted);">
+              <strong>Pas besoin de matériel quantique :</strong> il s'agit d'une mise à jour logicielle des bibliothèques de sécurité.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bit vs Qubit simple vulgarisation -->
+        <div class="card" style="padding:2rem;">
+          <h3 style="margin-bottom:1rem; text-align:center;">Comprendre la différence : Bit classique vs Qubit quantique</h3>
+          
+          <div class="bit-qubit-simple">
+            <div class="bq-box">
+              <span class="badge badge-cyan">ORDINATEUR CLASSIQUE</span>
+              <div class="bq-val" id="bit-simple-val">0</div>
+              <p>Un <strong>bit</strong> est obligatoirement 0 ou 1 (état certain).</p>
+              <button type="button" class="btn btn-outline btn-sm" id="btn-toggle-bit">Basculer le bit (0 / 1)</button>
+            </div>
+
+            <div class="bq-box">
+              <span class="badge badge-violet">ORDINATEUR QUANTIQUE</span>
+              <div class="bq-val violet" id="qubit-simple-val">|&psi;&rang;</div>
+              <p>Un <strong>qubit</strong> peut être en superposition (combinaison de 0 et 1).</p>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-measure-qubit">Mesurer le qubit</button>
+            </div>
+          </div>
+          <div id="qubit-simple-result" style="text-align:center; font-size:0.9rem; color:var(--accent-cyan); margin-top:1rem; min-height:22px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SECTION MISSIONS -->
+    <section id="missions" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">RESPONSABILITÉS</span>
+          <h2 class="section-title">Les 6 missions clés du spécialiste</h2>
+          <p class="section-subtitle">
+            Un travail complet allant de la technique pure à la stratégie d'entreprise.
+          </p>
+        </div>
+
+        <div class="grid-3" id="missions-container">
+          <!-- Populated cleanly by main.js with data/missions.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SECTION COMPÉTENCES -->
+    <section id="competences" class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">LE PROFIL RECHERCHÉ</span>
+          <h2 class="section-title">Les compétences indispensables</h2>
+          <p class="section-subtitle">
+            Une combinaison équilibrée entre cybersécurité, mathématiques et communication.
+          </p>
+        </div>
+
+        <div class="skills-simple-grid">
+          <div class="skill-group">
+            <h3 style="color:var(--accent-cyan); margin-bottom:1rem;">🛡️ Cybersécurité</h3>
+            <ul class="clean-list">
+              <li>Protocoles TLS, certificats PKI, VPN</li>
+              <li>Gestion des risques et analyse de vulnérabilités</li>
+              <li>Sécurité des architectures Cloud et réseaux</li>
+              <li>Audit de conformité (règlements NIS 2, DORA)</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 style="color:var(--accent-violet); margin-bottom:1rem;">⚛️ Informatique Quantique</h3>
+            <ul class="clean-list">
+              <li>Notions fondamentales (qubits, superposition)</li>
+              <li>Compréhension de l'algorithme de Shor et de Grover</li>
+              <li>Suivi de la recherche sur les qubits logiques</li>
+              <li>Capacité à filtrer les annonces sensationnelles</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 style="color:var(--accent-green); margin-bottom:1rem;">🔑 Cryptographie PQC</h3>
+            <ul class="clean-list">
+              <li>Cryptographie sur réseaux euclidiens (ML-KEM, ML-DSA)</li>
+              <li>Chiffrement hybride (classique + post-quantique)</li>
+              <li>Agilité cryptographique dans le code applicatif</li>
+              <li>Bibliothèques open-source (liboqs, OpenSSL 3)</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 style="color:var(--accent-warning); margin-bottom:1rem;">💡 Qualités Humaines (Soft Skills)</h3>
+            <ul class="clean-list">
+              <li>Vulgarisation auprès des comités de direction</li>
+              <li>Pédagogie avec les équipes de développement</li>
+              <li>Rigueur scientifique et esprit critique</li>
+              <li>Gestion de projet et vision à long terme</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SECTION FORMATION -->
+    <section id="formation" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PARCOURS D'ÉTUDES</span>
+          <h2 class="section-title">Comment accéder à ce métier ?</h2>
+          <p class="section-subtitle">
+            Il n'existe pas encore de diplôme unique : le parcours combine un socle en informatique et une spécialisation.
+          </p>
+        </div>
+
+        <div class="path-simple">
+          <div class="path-step">
+            <div class="step-badge">1</div>
+            <h4>Lycée</h4>
+            <p>Bac général avec spécialités Mathématiques, NSI ou Physique-Chimie.</p>
+          </div>
+
+          <div class="path-step">
+            <div class="step-badge">2</div>
+            <h4>Bac +3 : Licence ou BUT</h4>
+            <p>Licence Informatique, Math-Info ou BUT Réseaux &amp; Télécoms / Cybersécurité.</p>
+          </div>
+
+          <div class="path-step">
+            <div class="step-badge">3</div>
+            <h4>Bac +5 : Master ou Ingénieur</h4>
+            <p>École d'ingénieurs ou Master spécialisé en Cybersécurité ou Cryptologie.</p>
+          </div>
+
+          <div class="path-step highlight">
+            <div class="step-badge star">★</div>
+            <h4>Spécialisation PQC</h4>
+            <p>Doctorat ou expérience R&amp;D en transition post-quantique.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECTION AVENIR & SECTEURS -->
+    <section id="avenir" class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">DÉBOUCHÉS PROFESSIONNELS</span>
+          <h2 class="section-title">Où travaille ce spécialiste ?</h2>
+          <p class="section-subtitle">
+            Tous les secteurs manipulant des données à longue durée de vie sont concernés.
+          </p>
+        </div>
+
+        <div class="grid-3" style="margin-bottom:3rem;">
+          <div class="card">
+            <h4>🏦 Banques &amp; Assurances</h4>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">
+              Protection des transactions financières, des contrats de long terme et conformité aux régulateurs bancaires.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>🛡️ Défense &amp; Gouvernements</h4>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">
+              Préservation des secrets militaires et diplomatiques dont la sensibilité dépasse 30 à 50 ans.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>☁️ Télécoms &amp; Fournisseurs Cloud</h4>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">
+              Sécurisation du trafic internet mondial, des routeurs et des centres de données d'hébergement.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>🧬 Santé &amp; Recherche</h4>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">
+              Protection des données génétiques et dossiers médicaux qui restent immuables toute une vie.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>⚡ Énergie &amp; Industrie</h4>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">
+              Sécurisation des réseaux électriques intelligents (Smart Grids) et installations industrielles critiques.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>🔬 Cabinets de Conseil &amp; R&amp;D</h4>
+            <p style="font-size:0.9rem; margin-top:0.5rem;">
+              Accompagnement des grandes entreprises pour définir leur feuille de route de migration cryptographique.
+            </p>
+          </div>
+        </div>
+
+        <!-- Avantages & Défis -->
+        <div class="grid-2">
+          <div class="card" style="border-top:3px solid var(--accent-green);">
+            <h3 style="color:var(--accent-green); margin-bottom:0.75rem;">Les atouts du métier</h3>
+            <ul class="clean-list">
+              <li>Domaine d'avenir très recherché et valorisé</li>
+              <li>Impact concret sur la sécurité numérique globale</li>
+              <li>Carrefour passionnant entre recherche et ingénierie</li>
+              <li>Forte employabilité dans les grands groupes</li>
+            </ul>
+          </div>
+
+          <div class="card" style="border-top:3px solid var(--accent-warning);">
+            <h3 style="color:var(--accent-warning); margin-bottom:0.75rem;">Les principaux défis</h3>
+            <ul class="clean-list">
+              <li>Concepts mathématiques exigeants</li>
+              <li>Incertitude sur le calendrier réel des menaces quantiques</li>
+              <li>Nécessité de convaincre les directions d'investir dès maintenant</li>
+              <li>Contraintes de performance lors de l'intégration des clés PQC</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. SECTION SIMULATION (LAB SIMPLIFIÉ) -->
+    <section id="simulation" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">SIMULATION PÉDAGOGIQUE</span>
+          <h2 class="section-title">Quantum Security Lab — Nova Bank</h2>
+          <p class="section-subtitle">
+            Mettez-vous dans la peau du spécialiste : auditez les systèmes de la banque fictive et migrez-les vers la cryptographie post-quantique.
+          </p>
+        </div>
+
+        <div class="sim-box">
+          <div class="sim-header">
+            <div>
+              <span class="badge badge-cyan">ORGANISATION FICTIVE : NOVA BANK</span>
+              <h3 style="margin-top:0.5rem;">Tableau de bord de transition PQC</h3>
+            </div>
+            <div class="sim-metric">
+              <span style="font-size:0.8rem; color:var(--text-muted);">Résilience globale :</span>
+              <strong id="sim-score-val" style="font-size:1.8rem; color:var(--accent-cyan); display:block;">0%</strong>
+            </div>
+          </div>
+
+          <div class="sim-progress-track">
+            <div id="sim-progress-bar" style="width:0%; height:100%; background:var(--accent-cyan); transition:width 0.4s ease;"></div>
+          </div>
+
+          <!-- 4 Components Grid -->
+          <div class="sim-nodes-grid">
+            <div class="sim-node" id="sim-node-1">
+              <div class="node-title">Base Clients</div>
+              <div class="node-crypto">Actuel : RSA-2048</div>
+              <div class="node-pqc">Cible : ML-KEM-768</div>
+              <div class="node-status badge badge-danger" id="sim-status-1">Vulnérable</div>
+            </div>
+
+            <div class="sim-node" id="sim-node-2">
+              <div class="node-title">Paiements SEPA</div>
+              <div class="node-crypto">Actuel : ECDSA P-256</div>
+              <div class="node-pqc">Cible : ML-DSA-65</div>
+              <div class="node-status badge badge-danger" id="sim-status-2">Vulnérable</div>
+            </div>
+
+            <div class="sim-node" id="sim-node-3">
+              <div class="node-title">Portail Web TLS</div>
+              <div class="node-crypto">Actuel : Diffie-Hellman</div>
+              <div class="node-pqc">Cible : Hybride X25519/Kyber</div>
+              <div class="node-status badge badge-danger" id="sim-status-3">Vulnérable</div>
+            </div>
+
+            <div class="sim-node" id="sim-node-4">
+              <div class="node-title">VPN Inter-Agences</div>
+              <div class="node-crypto">Actuel : RSA-3072</div>
+              <div class="node-pqc">Cible : SLH-DSA / Kyber</div>
+              <div class="node-status badge badge-danger" id="sim-status-4">Vulnérable</div>
+            </div>
+          </div>
+
+          <!-- Action buttons -->
+          <div class="sim-actions">
+            <button type="button" class="btn btn-outline" id="btn-sim-audit">
+              1. Auditer les vulnérabilités
+            </button>
+            <button type="button" class="btn btn-primary" id="btn-sim-migrate">
+              2. Lancer la migration PQC
+            </button>
+            <button type="button" class="btn btn-secondary" id="btn-sim-test">
+              3. Tester la résistance
+            </button>
+            <button type="button" class="btn btn-outline btn-sm" id="btn-sim-reset" style="margin-left:auto;">
+              Réinitialiser
+            </button>
+          </div>
+
+          <div id="sim-message-box" class="sim-message">
+            Cliquez sur <strong>« 1. Auditer les vulnérabilités »</strong> pour lancer l'inventaire des clés.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. SECTION QUIZ SIMPLE -->
+    <section id="quiz" class="section section-dark">
+      <div class="container" style="max-width:760px;">
+        <div class="section-header">
+          <span class="section-tag">TEST RAPIDE</span>
+          <h2 class="section-title">Êtes-vous prêt pour l’ère quantique ?</h2>
+          <p class="section-subtitle">
+            Un quiz simple en 5 questions pour valider l'essentiel de la présentation.
+          </p>
+        </div>
+
+        <div class="card quiz-card" id="quiz-container">
+          <!-- Question container -->
+          <div id="quiz-question-view">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+              <span class="badge badge-cyan">Question <span id="quiz-q-num">1</span> / 5</span>
+              <span style="font-size:0.8rem; color:var(--text-muted);">Quiz étudiant</span>
+            </div>
+
+            <h3 id="quiz-question-text" style="font-size:1.2rem; margin-bottom:1.25rem;">
+              Chargement...
+            </h3>
+
+            <div id="quiz-options-list" class="quiz-options-list">
+              <!-- Rendered by quiz.js -->
+            </div>
+
+            <div id="quiz-feedback-box" style="display:none; padding:1rem; border-radius:8px; margin:1rem 0; font-size:0.9rem; line-height:1.6;">
+              <!-- Feedback -->
+            </div>
+
+            <div style="display:flex; justify-content:flex-end; margin-top:1rem;">
+              <button type="button" class="btn btn-primary btn-sm" id="quiz-next-btn" style="display:none;">
+                Question suivante &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Result container -->
+          <div id="quiz-result-view" style="display:none; text-align:center; padding:1.5rem 0;">
+            <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">VOTRE SCORE :</div>
+            <div id="quiz-score-display" style="font-size:3.5rem; font-weight:800; color:var(--accent-cyan); line-height:1;">
+              5 / 5
+            </div>
+            <h3 id="quiz-badge-title" style="font-size:1.6rem; color:var(--accent-green); margin:1rem 0 0.5rem 0;">
+              Quantum Security Specialist
+            </h3>
+            <p id="quiz-badge-desc" style="font-size:0.95rem; color:var(--text-secondary); max-width:500px; margin:0 auto 1.5rem auto;">
+              Bravo ! Vous maîtrisez les principes fondamentaux du métier et de la transition PQC.
+            </p>
+            <button type="button" class="btn btn-primary btn-sm" id="quiz-restart-btn">
+              Recommencer le quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. SECTION FAQ SIMPLE -->
+    <section id="faq" class="section">
+      <div class="container" style="max-width:850px;">
+        <div class="section-header">
+          <span class="section-tag">QUESTIONS COURANTES</span>
+          <h2 class="section-title">Foire aux questions</h2>
+          <p class="section-subtitle">
+            Les réponses claires et vérifiées aux questions que l'on se pose souvent.
+          </p>
+        </div>
+
+        <div class="faq-list" id="faq-list-container">
+          <!-- Populated by faq.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 12. FOOTER SIMPLE -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-simple-grid">
+        <div>
+          <div class="nav-brand">
+            <span>QUANTUM<span style="color:var(--accent-cyan);">SHIELD</span></span>
+          </div>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.5rem; max-width:320px;">
+            « Protéger les données d’aujourd’hui contre les ordinateurs de demain. »
+          </p>
+          <div style="margin-top:0.75rem;">
+            <span class="badge badge-cyan" style="font-size:0.72rem;">Projet scolaire &bull; Les métiers de demain</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size:0.9rem; color:var(--text-primary); margin-bottom:0.75rem; text-transform:uppercase;">Navigation</h4>
+          <ul class="footer-simple-links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#metier">Le métier</a></li>
+            <li><a href="#menace">La menace</a></li>
+            <li><a href="#missions">Missions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size:0.9rem; color:var(--text-primary); margin-bottom:0.75rem; text-transform:uppercase;">Sections</h4>
+          <ul class="footer-simple-links">
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#avenir">Avenir</a></li>
+            <li><a href="#simulation">Simulation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size:0.9rem; color:var(--text-primary); margin-bottom:0.75rem; text-transform:uppercase;">Pratique</h4>
+          <ul class="footer-simple-links">
+            <li><a href="#quiz">Quiz (5 questions)</a></li>
+            <li><a href="#faq">Foire aux questions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-simple-bottom">
+        <div>&copy; 2026 QUANTUM SHIELD &bull; Projet universitaire &laquo; Les métiers de demain &raquo;</div>
+        <div style="color:var(--text-muted);">Réalisé avec HTML, CSS &amp; JavaScript</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

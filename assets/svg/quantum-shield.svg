@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#00FF9C" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Shield Contour -->
+  <path d="M50 8 L85 24 V52 C85 74 50 92 50 92 C50 92 15 74 15 52 V24 Z" stroke="url(#shieldGrad)" stroke-width="2.5" fill="rgba(11, 16, 32, 0.8)" filter="url(#glow)" />
+
+  <!-- Quantum Core / Orbits -->
+  <ellipse cx="50" cy="50" rx="22" ry="9" stroke="#00D9FF" stroke-width="1.2" opacity="0.6" transform="rotate(-25 50 50)" />
+  <ellipse cx="50" cy="50" rx="22" ry="9" stroke="#8B5CF6" stroke-width="1.2" opacity="0.6" transform="rotate(35 50 50)" />
+  <circle cx="50" cy="50" r="5" fill="#00D9FF" filter="url(#glow)" />
+
+  <!-- Data Stream Nodes -->
+  <circle cx="50" cy="28" r="2.5" fill="#00FF9C" />
+  <circle cx="70" cy="45" r="2" fill="#00D9FF" />
+  <circle cx="30" cy="55" r="2" fill="#8B5CF6" />
+  <circle cx="50" cy="72" r="2.5" fill="#00FF9C" />
+</svg>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ &amp; Glossaire — Spécialiste Cybersécurité Quantique | QUANTUM SHIELD</title>
+  <meta name="description" content="Toutes les réponses aux questions sur la cybersécurité quantique et glossaire des termes techniques essentiels.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="/" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <span>QUANTUM<span style="color:var(--accent-cyan);">SHIELD</span></span>
+      </a>
+
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link"><span class="nav-num">01</span> Accueil</a></li>
+          <li><a href="/pages/metier.html" class="nav-link"><span class="nav-num">02</span> Le métier</a></li>
+          <li><a href="/pages/menace.html" class="nav-link"><span class="nav-num">03</span> La menace</a></li>
+          <li><a href="/pages/quantum.html" class="nav-link"><span class="nav-num">04</span> Quantum</a></li>
+          <li><a href="/pages/pqc.html" class="nav-link"><span class="nav-num">05</span> PQC</a></li>
+          <li><a href="/pages/missions.html" class="nav-link"><span class="nav-num">06</span> Missions</a></li>
+          <li><a href="/pages/competences.html" class="nav-link"><span class="nav-num">07</span> Compétences</a></li>
+          <li><a href="/pages/formation.html" class="nav-link"><span class="nav-num">08</span> Formation</a></li>
+          <li><a href="/pages/simulation.html" class="nav-link"><span class="nav-num">09</span> Simulation</a></li>
+          <li><a href="/pages/quiz.html" class="nav-link"><span class="nav-num">10</span> Quiz</a></li>
+          <li><a href="/pages/faq.html" class="nav-link active"><span class="nav-num">11</span> FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/pages/simulation.html" class="btn btn-outline btn-sm">Lab Interactif</a>
+        <button type="button" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width:960px;">
+      <div class="section-header">
+        <span class="section-tag">DÉMYSTIFICATION SCIENTIFIQUE</span>
+        <h1 class="section-title">Foire Aux Questions &amp; Glossaire</h1>
+        <p class="section-subtitle">
+          Toutes les réponses documentées pour comprendre la réalité de la transition quantique sans battage médiatique.
+        </p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div id="faq-accordion-container" class="faq-list" style="margin-bottom:3.5rem;">
+        <!-- Populated by faq.js -->
+      </div>
+
+      <!-- GLOSSAIRE TECHNIQUE -->
+      <div class="card" style="padding:2.5rem; margin-bottom:2.5rem;">
+        <span class="badge badge-cyan">GLOSSAIRE PÉDAGOGIQUE</span>
+        <h2 style="font-size:1.8rem; margin:0.75rem 0 1.5rem 0;">Lexique des termes incontournables</h2>
+
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
+            <strong style="color:var(--accent-cyan); font-family:var(--font-heading); font-size:1.1rem;">Cryptographie :</strong>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin-top:0.3rem;">
+              Ensemble des principes et techniques mathématiques permettant de garantir la confidentialité, l'authenticité et l'intégrité des informations numériques.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
+            <strong style="color:var(--accent-cyan); font-family:var(--font-heading); font-size:1.1rem;">Qubit (Quantum Bit) :</strong>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin-top:0.3rem;">
+              Unité fondamentale d’information en informatique quantique. Contrairement au bit classique qui vaut 0 ou 1, un qubit peut se trouver dans une superposition continue des deux états de base.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
+            <strong style="color:var(--accent-cyan); font-family:var(--font-heading); font-size:1.1rem;">PQC (Post-Quantum Cryptography) :</strong>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin-top:0.3rem;">
+              Algorithmes cryptographiques conçus mathématiquement pour s'exécuter sur des ordinateurs classiques actuels tout en résistant aux attaques potentielles d'ordinateurs quantiques.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
+            <strong style="color:var(--accent-cyan); font-family:var(--font-heading); font-size:1.1rem;">Harvest Now, Decrypt Later (HNDL) :</strong>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin-top:0.3rem;">
+              Stratégie cybercriminelle et d'espionnage consistant à intercepter et stocker dès aujourd'hui des flux de données chiffrées dans l'objectif de les casser rétroactivement dans le futur.
+            </p>
+          </div>
+
+          <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
+            <strong style="color:var(--accent-cyan); font-family:var(--font-heading); font-size:1.1rem;">Cryptographie sur réseaux euclidiens (Lattice-based) :</strong>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin-top:0.3rem;">
+              Famille mathématique reposant sur la difficulté géométrique de trouver le point d'un réseau régulier multidimensionnel le plus proche d'un point arbitraire (problèmes LWE et SIS). C'est le fondement de ML-KEM et ML-DSA.
+            </p>
+          </div>
+
+          <div>
+            <strong style="color:var(--accent-cyan); font-family:var(--font-heading); font-size:1.1rem;">CBOM (Cryptographic Bill of Materials) :</strong>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin-top:0.3rem;">
+              Inventaire exhaustif et automatisé de tous les algorithmes, certificats, bibliothèques et longueurs de clés cryptographiques utilisés au sein d’un système informatique.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:3rem;">
+        <a href="/pages/quiz.html" class="btn btn-outline">&larr; Le quiz</a>
+        <a href="/" class="btn btn-primary">Retour à la page d'accueil &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center;">
+      <p>&copy; 2026 QUANTUM SHIELD &bull; Projet scolaire &laquo; Les métiers de demain &raquo;</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/faq.js"></script>
+  <script type="module" src="/js/navigation.js"></script>
+  <script type="module">
+    import { initFAQ } from '/js/faq.js';
+    import { initNavigation } from '/js/navigation.js';
+    initNavigation();
+    initFAQ();
+  </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Security Lab — Simulation Nova Bank | QUANTUM SHIELD</title>
+  <meta name="description" content="Laboratoire interactif de simulation cryptographique : auditez Nova Bank, identifiez les risques Shor et testez la transition post-quantique.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="/" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <span>QUANTUM<span style="color:var(--accent-cyan);">SHIELD</span></span>
+      </a>
+
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link"><span class="nav-num">01</span> Accueil</a></li>
+          <li><a href="/pages/metier.html" class="nav-link"><span class="nav-num">02</span> Le métier</a></li>
+          <li><a href="/pages/menace.html" class="nav-link"><span class="nav-num">03</span> La menace</a></li>
+          <li><a href="/pages/quantum.html" class="nav-link"><span class="nav-num">04</span> Quantum</a></li>
+          <li><a href="/pages/pqc.html" class="nav-link"><span class="nav-num">05</span> PQC</a></li>
+          <li><a href="/pages/missions.html" class="nav-link"><span class="nav-num">06</span> Missions</a></li>
+          <li><a href="/pages/competences.html" class="nav-link"><span class="nav-num">07</span> Compétences</a></li>
+          <li><a href="/pages/formation.html" class="nav-link"><span class="nav-num">08</span> Formation</a></li>
+          <li><a href="/pages/simulation.html" class="nav-link active"><span class="nav-num">09</span> Simulation</a></li>
+          <li><a href="/pages/quiz.html" class="nav-link"><span class="nav-num">10</span> Quiz</a></li>
+          <li><a href="/pages/faq.html" class="nav-link"><span class="nav-num">11</span> FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/" class="btn btn-outline btn-sm">&larr; Accueil</a>
+        <button type="button" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SIMULATEUR OPÉRATIONNEL &bull; SANDBOX</span>
+        <h1 class="section-title">Quantum Security Lab</h1>
+        <p class="section-subtitle">
+          Incarnez le spécialiste au sein de <strong>NOVA BANK</strong>. Menez l'inventaire CBOM, découvrez les faiblesses asymétriques et déployez le bouclier post-quantique.
+        </p>
+      </div>
+
+      <div class="simulation-notice" style="margin-bottom:2rem;">
+        <span>SIMULATION PÉDAGOGIQUE :</span>
+        <span>Cette sandbox est une modélisation éducative interactive, conçue pour illustrer le workflow professionnel d’un ingénieur en cybersécurité quantique.</span>
+      </div>
+
+      <!-- LAB INTERFACE -->
+      <div id="quantum-security-lab" class="lab-container">
+        <div class="lab-header">
+          <div>
+            <div class="lab-org-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              <span>INFRASTRUCTURE RÉSEAU : NOVA BANK CORP.</span>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:2.5rem;">
+            <div>
+              <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">RÉSILIENCE POST-QUANTIQUE :</div>
+              <div style="font-family:var(--font-heading); font-size:1.8rem; font-weight:800; color:var(--accent-cyan);" id="lab-global-readiness">0%</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">STATUT DU BOUCLIER :</div>
+              <div style="font-family:var(--font-heading); font-size:1.2rem; font-weight:700; color:var(--accent-danger);" id="lab-global-threat-level">CRITIQUE</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:6px; background:rgba(255,255,255,0.06); border-radius:3px; margin-bottom:2rem; overflow:hidden;">
+          <div id="lab-global-progress" style="width:0%; height:100%; background:var(--accent-cyan); transition:width 0.5s ease;"></div>
+        </div>
+
+        <!-- 4 Infrastructure Nodes -->
+        <div class="lab-topology">
+          <div id="node-client-data" class="lab-node selected status-vulnerable">
+            <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+              <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--accent-cyan);">STORAGE VAULT</span>
+              <span class="badge badge-danger node-status-badge">À AUDITER</span>
+            </div>
+            <h4 style="font-size:1rem; font-weight:700;">Données Clients &amp; Comptes</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.3rem;">Base SQL &bull; Chiffrement au repos</p>
+          </div>
+
+          <div id="node-transactions" class="lab-node status-vulnerable">
+            <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+              <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--accent-cyan);">PAYMENT CORE</span>
+              <span class="badge badge-danger node-status-badge">À AUDITER</span>
+            </div>
+            <h4 style="font-size:1rem; font-weight:700;">Transactions Financières</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.3rem;">Signatures SEPA &bull; SWIFT interbancaire</p>
+          </div>
+
+          <div id="node-auth-portal" class="lab-node status-vulnerable">
+            <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+              <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--accent-cyan);">API &amp; WEB TLS</span>
+              <span class="badge badge-danger node-status-badge">À AUDITER</span>
+            </div>
+            <h4 style="font-size:1rem; font-weight:700;">Portail Authentification</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.3rem;">OAuth 2.0 &bull; Handshakes TLS 1.3</p>
+          </div>
+
+          <div id="node-comms" class="lab-node status-vulnerable">
+            <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+              <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--accent-cyan);">VPN IPSEC</span>
+              <span class="badge badge-danger node-status-badge">À AUDITER</span>
+            </div>
+            <h4 style="font-size:1rem; font-weight:700;">Télécoms Agences</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.3rem;">Tunnels inter-sites &bull; Réplication</p>
+          </div>
+        </div>
+
+        <!-- Node Details & Controls -->
+        <div class="lab-details-panel">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <span class="badge badge-danger" id="lab-detail-badge">EN ATTENTE D'AUDIT</span>
+              <h3 style="font-size:1.45rem; font-weight:700; margin-top:0.5rem;" id="lab-detail-title">Données Clients &amp; Comptes</h3>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">EXPOSITION ALGORITHME DE SHOR :</div>
+              <div style="font-family:var(--font-heading); font-size:1.3rem; font-weight:700; color:var(--accent-danger);" id="lab-detail-risk">NON ÉVALUÉ</div>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
+            <div style="background:rgba(5,7,13,0.6); padding:1rem; border-radius:6px; border:1px solid var(--border-subtle);">
+              <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">CRYPTOSYSTÈME DÉTECTÉ :</div>
+              <div style="font-family:var(--font-mono); font-size:1rem; color:var(--text-primary); margin-top:0.3rem;" id="lab-detail-crypto">RSA-2048 + AES-256</div>
+            </div>
+            <div style="background:rgba(5,7,13,0.6); padding:1rem; border-radius:6px; border:1px solid var(--border-subtle);">
+              <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-green);">ALGORITHME POST-QUANTIQUE CIBLE :</div>
+              <div style="font-family:var(--font-mono); font-size:1rem; color:var(--accent-green); margin-top:0.3rem;" id="lab-detail-target">ML-KEM-768 (Kyber) + AES-256-GCM</div>
+            </div>
+          </div>
+
+          <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;" id="lab-detail-threat">
+            Cliquez sur "Analyser le système" pour lancer l'audit CBOM et découvrir les vulnérabilités quantiques.
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+            <button type="button" class="btn btn-outline" id="lab-btn-audit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Analyser le système</span>
+            </button>
+            <button type="button" class="btn btn-secondary" id="lab-btn-migrate-hybrid">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+              <span>Déployer Mode Hybride (50%)</span>
+            </button>
+            <button type="button" class="btn btn-primary" id="lab-btn-migrate-full">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Migration Complète PQC (100%)</span>
+            </button>
+            <button type="button" class="btn btn-outline" style="border-color:var(--accent-warning); color:var(--accent-warning);" id="lab-btn-attack">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>Tester Attaque Quantique</span>
+            </button>
+            <button type="button" class="btn btn-outline btn-sm" id="lab-btn-reset" style="margin-left:auto;">
+              <span>Réinitialiser</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Terminal log -->
+        <div>
+          <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); margin-bottom:0.4rem; display:flex; justify-content:space-between;">
+            <span>TERMINAL DES ÉVÉNEMENTS DU LAB</span>
+            <span>NOYAU DE SÉCURITÉ CONNECTÉ</span>
+          </div>
+          <div class="lab-terminal-output" id="lab-terminal"></div>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:3rem;">
+        <a href="/pages/formation.html" class="btn btn-outline">&larr; La formation</a>
+        <a href="/pages/quiz.html" class="btn btn-primary">Passer au quiz interactif &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center;">
+      <p>&copy; 2026 QUANTUM SHIELD &bull; Projet scolaire &laquo; Les métiers de demain &raquo;</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/simulation.js"></script>
+  <script type="module" src="/js/navigation.js"></script>
+  <script type="module">
+    import { initSimulationLab } from '/js/simulation.js';
+    import { initNavigation } from '/js/navigation.js';
+    initNavigation();
+    initSimulationLab();
+  </script>
+</body>
+</html>

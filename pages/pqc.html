@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post-Quantum Cryptography (PQC) | QUANTUM SHIELD</title>
+  <meta name="description" content="Les algorithmes post-quantiques normalisés par le NIST : ML-KEM, ML-DSA, SLH-DSA et la cryptographie sur réseaux euclidiens.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="/" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <span>QUANTUM<span style="color:var(--accent-cyan);">SHIELD</span></span>
+      </a>
+
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link"><span class="nav-num">01</span> Accueil</a></li>
+          <li><a href="/pages/metier.html" class="nav-link"><span class="nav-num">02</span> Le métier</a></li>
+          <li><a href="/pages/menace.html" class="nav-link"><span class="nav-num">03</span> La menace</a></li>
+          <li><a href="/pages/quantum.html" class="nav-link"><span class="nav-num">04</span> Quantum</a></li>
+          <li><a href="/pages/pqc.html" class="nav-link active"><span class="nav-num">05</span> PQC</a></li>
+          <li><a href="/pages/missions.html" class="nav-link"><span class="nav-num">06</span> Missions</a></li>
+          <li><a href="/pages/competences.html" class="nav-link"><span class="nav-num">07</span> Compétences</a></li>
+          <li><a href="/pages/formation.html" class="nav-link"><span class="nav-num">08</span> Formation</a></li>
+          <li><a href="/pages/simulation.html" class="nav-link"><span class="nav-num">09</span> Simulation</a></li>
+          <li><a href="/pages/quiz.html" class="nav-link"><span class="nav-num">10</span> Quiz</a></li>
+          <li><a href="/pages/faq.html" class="nav-link"><span class="nav-num">11</span> FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/pages/simulation.html" class="btn btn-outline btn-sm">Lab Interactif</a>
+        <button type="button" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width:960px;">
+      <div class="section-header">
+        <span class="section-tag">LE BOUCLIER CRYPTOGRAPHIQUE</span>
+        <h1 class="section-title">Post-Quantum Cryptography (PQC)</h1>
+        <p class="section-subtitle">
+          Comment les mathématiques des réseaux euclidiens construisent les forteresses numériques de demain.
+        </p>
+      </div>
+
+      <!-- Distinction Clarification -->
+      <div class="card" style="margin-bottom:2.5rem; padding:2rem; border-left:4px solid var(--accent-cyan);">
+        <h3 style="font-size:1.2rem; color:var(--accent-cyan); margin-bottom:0.5rem;">PQC vs Cryptographie Quantique (QKD) : Ne pas confondre !</h3>
+        <p style="font-size:0.95rem; line-height:1.7; color:var(--text-secondary);">
+          La <strong>PQC (Post-Quantum Cryptography)</strong> est 100% logicielle. Elle s’installe dès maintenant sur un smartphone, un serveur Linux ou une carte bancaire existante, sans acheter aucun laser ou composant quantique.<br>
+          À l’inverse, la <strong>QKD (Quantum Key Distribution)</strong> requiert des émetteurs de photons uniques et des fibres optiques dédiées, limitées en distance et coûteuses. La PQC est la solution retenue pour sécuriser le Web mondial.
+        </p>
+      </div>
+
+      <!-- The 3 NIST Standard Algorithms -->
+      <h2 style="font-size:1.8rem; margin-bottom:1.5rem;">Les 3 standards officiels du NIST (août 2024)</h2>
+      
+      <div style="display:flex; flex-direction:column; gap:1.5rem; margin-bottom:2.5rem;">
+        <div class="card" style="border-top:3px solid var(--accent-cyan);">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <span class="badge badge-cyan">FIPS 203 &bull; ENCAPSULATION DE CLÉ (KEM)</span>
+              <h3 style="font-size:1.4rem; font-weight:700; margin-top:0.4rem;">ML-KEM (Module-Lattice-Based Key-Encapsulation Mechanism)</h3>
+              <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted);">Anciennement connu sous le nom : CRYSTALS-Kyber</div>
+            </div>
+            <span class="badge badge-green">Standard Principal d'Échange</span>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1rem;">
+            Conçu pour remplacer les échanges de clés RSA et Diffie-Hellman / ECDH dans les protocoles TLS 1.3, VPN IPsec et messageries chiffrées.
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; background:rgba(5,7,13,0.5); padding:1rem; border-radius:6px; font-size:0.82rem;">
+            <div><strong>Famille :</strong> Réseaux euclidiens (Module-LWE)</div>
+            <div><strong>Taille de clé publique :</strong> 1184 octets (ML-KEM-768)</div>
+            <div><strong>Sécurité :</strong> Équivalent AES-192 / NIST Niveau 3</div>
+          </div>
+        </div>
+
+        <div class="card" style="border-top:3px solid var(--accent-violet);">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <span class="badge badge-violet">FIPS 204 &bull; SIGNATURE NUMÉRIQUE (DSA)</span>
+              <h3 style="font-size:1.4rem; font-weight:700; margin-top:0.4rem;">ML-DSA (Module-Lattice-Based Digital Signature Algorithm)</h3>
+              <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted);">Anciennement connu sous le nom : CRYSTALS-Dilithium</div>
+            </div>
+            <span class="badge badge-green">Standard Principal de Signature</span>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1rem;">
+            Conçu pour remplacer les signatures numériques RSA et ECDSA pour l'authentification des serveurs, les certificats X.509 et les signatures de code.
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; background:rgba(5,7,13,0.5); padding:1rem; border-radius:6px; font-size:0.82rem;">
+            <div><strong>Famille :</strong> Réseaux euclidiens (Module-SIS / LWE)</div>
+            <div><strong>Taille de signature :</strong> ~3293 octets (ML-DSA-65)</div>
+            <div><strong>Sécurité :</strong> Résistance prouvée contre Shor</div>
+          </div>
+        </div>
+
+        <div class="card" style="border-top:3px solid var(--accent-warning);">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <span class="badge badge-warning">FIPS 205 &bull; SIGNATURE DE SECOURS (SLH)</span>
+              <h3 style="font-size:1.4rem; font-weight:700; margin-top:0.4rem;">SLH-DSA (Stateless Hash-Based Digital Signature Algorithm)</h3>
+              <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted);">Anciennement connu sous le nom : SPHINCS+</div>
+            </div>
+            <span class="badge badge-cyan">Plan de Secours Hors-Réseau</span>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1rem;">
+            Repose exclusivement sur la sécurité des fonctions de hachage cryptographiques (sans aucun réseau euclidien). Si une faiblesse mathématique était découverte sur les réseaux euclidiens, SLH-DSA garantirait la survie de la sécurité mondiale.
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; background:rgba(5,7,13,0.5); padding:1rem; border-radius:6px; font-size:0.82rem;">
+            <div><strong>Famille :</strong> Arbres de Merkle &amp; Hachage</div>
+            <div><strong>Hypothèse :</strong> Uniquement la robustesse de SHA-2/3</div>
+            <div><strong>Rôle :</strong> Assurance cryptographique ultime</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Hybrids First? -->
+      <div class="card" style="margin-bottom:2.5rem; padding:2.5rem;">
+        <h2 style="font-size:1.6rem; margin-bottom:1rem;">Pourquoi commencer par le mode hybride ?</h2>
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary); margin-bottom:1rem;">
+          L’ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information en France) et le BSI allemand recommandent formellement le <strong>chiffrement hybride</strong> pour la décennie à venir :
+        </p>
+        <div style="background:rgba(0,217,255,0.06); border:1px solid var(--border-cyan); border-radius:8px; padding:1.25rem; font-family:var(--font-mono); font-size:0.9rem; text-align:center; color:var(--accent-cyan); margin-bottom:1.25rem;">
+          Clé de session = KDF(Clé Classique X25519 || Clé Post-Quantique ML-KEM)
+        </div>
+        <p style="font-size:0.95rem; line-height:1.8; color:var(--text-secondary);">
+          Pour casser cette session, un attaquant devrait casser <em>à la fois</em> la cryptographie classique ET la cryptographie post-quantique. Même si une faiblesse théorique apparaissait sur un algorithme récent, l’algorithme éprouvé protège toujours les données, et vice-versa.
+        </p>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:3rem;">
+        <a href="/pages/quantum.html" class="btn btn-outline">&larr; L'ordinateur quantique</a>
+        <a href="/pages/missions.html" class="btn btn-primary">Voir les 6 missions du spécialiste &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align:center;">
+      <p>&copy; 2026 QUANTUM SHIELD &bull; Projet scolaire &laquo; Les métiers de demain &raquo;</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/navigation.js"></script>
+</body>
+</html>

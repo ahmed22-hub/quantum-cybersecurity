@@ -1,0 +1,6 @@
+{
+  "name": "QUANTUM SHIELD — Spécialiste Cybersécurité Quantique",
+  "description": "Plateforme éducative et prospective futuriste sur le métier de Spécialiste de la cybersécurité quantique et la cryptographie post-quantique (PQC).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
